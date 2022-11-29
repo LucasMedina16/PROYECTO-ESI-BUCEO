@@ -1,0 +1,98 @@
+@import './_main.scss';
+@import './event.scss';
+@import './variables/_variables.scss';
+
+* {
+    margin: 0;
+}
+
+.resultDisplay {
+    
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 3%;
+    margin-top: 5%;
+
+    .results {
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        ul {
+
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+
+            li {
+
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 15px 0;
+                
+                .event-image-container{
+
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    margin: 0 15px;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .position{
+
+                    font-weight: 500;
+                    color: var(--grayish-black);
+
+                }
+
+                .name{
+
+                    font-size: 1em;
+                    font-weight: 600;
+                    color: var(--grayish-black);
+                    padding: 0 15px;
+
+                }
+
+                .time{
+
+                    font-weight: 600;
+                    color: var(--grayish-black);
+
+                }
+            }
+
+            li:first-of-type{
+
+                .name, .position, .time{
+
+                    color: var(--black);
+                    font-weight: 700;
+
+                }
+
+
+            }
+        }
+    }
+}

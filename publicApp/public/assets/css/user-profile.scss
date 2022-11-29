@@ -1,0 +1,418 @@
+@import './_main.scss';
+@include InnerNav;
+
+.userDisplay {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px 0 0 0;
+    .user{
+        display: flex;
+        width: auto;
+        align-items: center;
+        margin-left:1.5%;
+        position: absolute;
+        .profile-image{
+                
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--main-purple);
+            margin: 0 15px 0 30px;
+            padding: 3px;
+
+            img{
+
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+        }
+        .data{
+            width: auto;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 15px;
+
+            .userName{
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 700;
+                white-space: nowrap;
+                font-size: 1.3em;
+
+                .premium-user{
+
+                    padding-right: 10px;
+
+                    span{
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        color: var(--yellow);
+                        font-size: 1.2em;
+                        font-variation-settings:
+                        'FILL' 1,
+                        'wght' 400,
+                        'GRAD' 0,
+                        'opsz' 48
+
+                    }
+
+                }
+            }
+            .email{
+                font-size: 1em;
+                font-weight: 500;
+            }
+
+        }
+    
+        #result {
+            margin: 4%;
+            font-size: 1.5em;
+            font-weight: 800;
+        }
+        .edit-user-btn{
+    
+            position: relative;
+            left: 30px;
+            top: -15px;
+            background-color: var(--shade-scnd-purple);
+            padding: 8px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            transition: .3s;
+            text-decoration: none;
+
+            span{
+
+                font-size: 1.5em;
+                color: var(--black);
+            }
+    
+        }
+
+        .edit-user-btn:hover{
+
+            background-color: var(--lightest-purple);
+
+        }
+    }
+}
+.display {
+    @include set-post;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--gray);
+
+    .event{
+
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 30px 60px;
+
+        .header{
+
+            width: 20vw;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 15px 15px 0 0;
+            background-color: var(--main-purple);
+            color: var(--white);
+            font-weight: 600;
+
+        }
+
+        .details{
+
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--grayish-black);
+            text-align: center;
+
+        }
+
+        form{
+
+            .unfollow-event{
+
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 30px;
+                border: none;
+                background-color: var(--light-gray);
+                color: var(--white);
+                font-weight: 600;
+                border-radius: 30px;
+                margin: 0 0 30px 0;
+                transition: .3s;
+
+            }
+
+            .unfollow-event:hover, .unfollow-event:focus{
+
+                background-color: var(--dark-gray);
+                transform: scale(.98);
+
+            }
+
+        }
+
+    }
+
+}
+.ads{
+    padding-right: 1%;
+}
+
+.edit-user-container{
+
+    margin: 150px 0 0 60px;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+
+    h1{
+
+        margin: 30px;
+
+    }
+    
+    form{
+
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 30px;
+
+        .form-up-container{
+
+            width: inherit;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+    
+                .logout-button{
+
+                    width: fit-content;
+                    height: auto;
+                    font-size: 1em;
+                    font-weight: 600;
+                    color: var(--red);
+                    border-radius: 10px;
+                    transition: .3s;
+                    text-underline-offset: 3px;
+                    margin: 30px 0;
+                }
+
+            .upgrade-account{
+
+                width: fit-content;
+                height: auto;
+                border: none;
+                padding: 10px 30px;
+                background-color: var(--yellow);
+                color: var(--white);
+                font-weight: 600;
+                border-radius: 10px;
+                transition: .3s;
+                text-decoration: none;
+                margin: 15px 0 0 0;
+
+            }
+
+            .error{
+
+                font-size: 0.8em;
+                font-weight: 600;
+                color: var(--red);
+    
+            }
+
+            .cancel-account{
+
+                width: fit-content;
+                height: auto;
+                border: none;
+                padding: 10px 30px;
+                background-color: var(--red);
+                color: var(--white);
+                font-weight: 600;
+                border-radius: 10px;
+                transition: .3s;
+                text-decoration: none;
+                margin: 15px 0 0 0;
+
+            }
+
+            .upgrade-account:hover, .upgrade-account:focus{
+
+                background-color: var(--shade-yellow);
+                transform: scale(.98);
+            }
+
+            .cancel-account:hover, .cancel-account:focus{
+
+                background-color: var(--light-red);
+                transform: scale(.98);
+            }
+
+            label{
+
+                width: inherit;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 10px 0;
+                font-weight: 600;
+                color: var(--dark-gray);
+
+                .input{
+
+                    width: 250px;
+                    height: 40px;
+                    background-color: var(--gray);
+                    border: none;
+                    border-radius: 10px;
+                    margin: 10px 0 0 0;
+                    padding: 0 10px;
+
+                }
+
+            }
+        
+            .custom-selector{
+
+                .input-image{
+
+                    width: .1px;
+                    height: .1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: 0;
+
+                }
+
+                .label-image {
+
+                    width: 10vw;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: var(--lightest-gray);
+                    padding: 0px 10px;
+                    color: var(--white);
+                    font-size: 1em;
+                    transition: .2s;
+                    cursor: pointer;
+                    padding: 10px 30px;
+
+                    p{
+
+                        font-weight: 700;
+                        color: var(--white);
+
+                    }
+
+                }
+                .label-image:hover{
+
+                    background-color: var(--light-gray);
+                    transform: scale(.98);
+
+                }
+
+            }
+
+
+        }
+
+        .form-down-container{
+
+            width: inherit;
+            height: auto;
+            margin: 30px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            button{
+
+                width: auto;
+                height: auto;
+                border: none;
+                padding: 10px 30px;
+                font-size: 1em;
+                font-weight: 600;
+                color: var(--white);
+                border-radius: 10px;
+                background-color: var(--main-purple);
+                transition: .3s;
+
+            }
+
+            button:hover, button:focus{
+
+                background-color: var(--light-purple);
+                transform: scale(.98);
+
+            }
+
+        }
+
+    }
+
+}
